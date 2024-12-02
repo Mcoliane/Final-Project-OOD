@@ -48,13 +48,14 @@ public class Computer {
         return storage;
     }
 
-public void AssemblePC(Computer computer) {
-    System.out.println("Display computer information:");
-    System.out.println("\n Processor: ");
-    System.out.println("\n Graphics Card: ");
-    System.out.println("\n Motherboard: ");
-    System.out.println("\n Power Supply: ");
-    System.out.println("\n Storage: ");
-    System.out.println("\n Computer Assembled Successfully");
+    public void AssemblePC(Computer computer) {
+        System.out.println("Display computer information:");
+        System.out.println("\n Processor: " + computer.processor.getName());
+        System.out.println("\n Graphics Card: " + computer.graphicsCard.getName());
+        System.out.println("\n Motherboard: " + computer.motherboard.getName());
+        System.out.println("\n Power Supply: " + computer.powerSupply.getName());
+        System.out.println("\n Storage: " + computer.storage.getName());
+        System.out.println("\n Memory: " + computer.memory.getName());
+        System.out.println("\n Computer Assembled Successfully");
     }
 }

@@ -1,7 +1,7 @@
 package groupproject;
 
 // GraphicsCard class 
-//assuming name will the be the name of the graphics card
+//assuming name will be the name of the graphics card
 //assume manufacturer is amd or nvidia
 public class GraphicsCard {
     private String name;
