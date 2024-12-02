@@ -28,6 +28,10 @@ public class Computer {
         this.storage = storage;
     }
 
+    public void setMemory(Memory memory) {
+        this.memory = memory;
+    }
+
     public Processor getProcessor() {
         return processor;
     }
@@ -46,6 +50,10 @@ public class Computer {
 
     public Storage getStorage() {
         return storage;
+    }
+
+    public Memory getMemory() {
+        return memory;
     }
 
     public void AssemblePC(Computer computer) {
