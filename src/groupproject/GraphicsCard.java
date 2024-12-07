@@ -7,8 +7,9 @@ public class GraphicsCard {
     private String name;
     private String model;
     private String manufacturer;
+    private double cost;
 
-    public GraphicsCard(String name, String model, String manufacturer) {
+    public GraphicsCard(String name, String model, String manufacturer, double cost) {
         this.name = name;
         this.model = model;
         this.manufacturer = manufacturer;
@@ -24,5 +25,9 @@ public class GraphicsCard {
 
     public String getManufacturer() {
         return manufacturer;
+    }
+
+    public double getCost() {
+        return cost;
     }
 }

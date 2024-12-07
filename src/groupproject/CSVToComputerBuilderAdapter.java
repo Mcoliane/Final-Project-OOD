@@ -13,32 +13,32 @@ public class CSVToComputerBuilderAdapter implements ComputerBuilder {
 
     @Override
     public void Processor() {
-        computer.setProcessor(new Processor(data.get("Processor"), "Unknown", "Unknown"));
+        computer.setProcessor(new Processor(data.get("Processor"), "Unknown", "Unknown", 0.0));
     }
 
     @Override
     public void Graphics() {
-        computer.setGraphics(new GraphicsCard(data.get("Graphics"), "Unknown", "Unknown"));
+        computer.setGraphics(new GraphicsCard(data.get("Graphics"), "Unknown", "Unknown", 0.0));
     }
 
     @Override
     public void Motherboard() {
-        computer.setMotherboard(new Motherboard(data.get("Motherboard"), "Unknown", "Unknown"));
+        computer.setMotherboard(new Motherboard(data.get("Motherboard"), "Unknown", "Unknown", 0.0));
     }
 
     @Override
     public void PowerSupply() {
-        computer.setPowerSupply(new PowerSupply(data.get("PowerSupply"), "Unknown", "Unknown"));
+        computer.setPowerSupply(new PowerSupply(data.get("PowerSupply"), "Unknown", "Unknown", 0.0));
     }
 
     @Override
     public void Storage() {
-        computer.setStorage(new Storage(data.get("Storage"), "Unknown", "Unknown"));
+        computer.setStorage(new Storage(data.get("Storage"), "Unknown", "Unknown", 0.0));
     }
 
     @Override
     public void Memory() {
-        computer.setMemory(new Memory(data.get("Memory"), "Unknown", "Unknown"));
+        computer.setMemory(new Memory(data.get("Memory"), "Unknown", "Unknown", 0.0));
     }
 
     @Override
