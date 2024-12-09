@@ -1,11 +1,9 @@
 package Builder;
 
-import Decorator.ComputerInterface;
-
 import java.util.ArrayList;
 import java.util.List;
 
-public class Computer implements ComputerInterface {
+public class Computer implements ComputerComponent {
     private List<String> parts = new ArrayList<>();
 
     @Override

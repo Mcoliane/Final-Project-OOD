@@ -1,11 +1,15 @@
 package ui;
 
-import Builder.Computer;
-import Builder.ComputerBuilder;
-import Builder.ConcreteComputerBuilder;
 import Adapter.CSVPartsAdapter;
 import Adapter.CSVReader;
 import Adapter.PartsSource;
+import Builder.Computer;
+import Builder.ComputerBuilder;
+import Builder.ComputerComponent;
+import Builder.ConcreteComputerBuilder;
+import decorator.KeyboardDecorator;
+import decorator.MouseDecorator;
+import decorator.MonitorDecorator;
 
 import javax.swing.*;
 import java.awt.*;
@@ -21,6 +25,10 @@ public class ComputerBuilderApp extends JFrame {
     private JComboBox<String> gpuCombo;
     private JComboBox<String> otherCombo;
 
+    private JCheckBox keyboardCheck;
+    private JCheckBox mouseCheck;
+    private JCheckBox monitorCheck;
+
     private JTextArea resultArea;
 
     private PartsSource partsSource;
@@ -29,12 +37,12 @@ public class ComputerBuilderApp extends JFrame {
     public ComputerBuilderApp() {
         super("Computer Builder");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(600, 400);
+        setSize(600, 500);
         setLayout(new BorderLayout());
 
         // Load parts using adapter
         try {
-            CSVReader csvReader = new CSVReader("/Users/super/IdeaProjects/Fall_2024/TestFinalProj/src/Adapter/parts.csv");
+            CSVReader csvReader = new CSVReader("/Users/super/IdeaProjects/Fall_2024/TestFinalProj/src/parts.csv");
             csvReader.load();
             partsSource = new CSVPartsAdapter(csvReader);
         } catch (Exception e) {
@@ -44,7 +52,7 @@ public class ComputerBuilderApp extends JFrame {
 
         builder = new ConcreteComputerBuilder();
 
-        JPanel selectionPanel = new JPanel(new GridLayout(6, 2, 5, 5));
+        JPanel selectionPanel = new JPanel(new GridLayout(9, 2, 5, 5));
         selectionPanel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 
         cpuCombo = createCombo(partsSource.getCPUs());
@@ -67,6 +75,20 @@ public class ComputerBuilderApp extends JFrame {
 
         selectionPanel.add(new JLabel("Other:"));
         selectionPanel.add(otherCombo);
+
+        // Decorator-related UI components
+        keyboardCheck = new JCheckBox("Add Keyboard");
+        mouseCheck = new JCheckBox("Add Mouse");
+        monitorCheck = new JCheckBox("Add Monitor");
+
+        selectionPanel.add(keyboardCheck);
+        selectionPanel.add(new JLabel(""));
+
+        selectionPanel.add(mouseCheck);
+        selectionPanel.add(new JLabel(""));
+
+        selectionPanel.add(monitorCheck);
+        selectionPanel.add(new JLabel(""));
 
         JButton buildButton = new JButton("Build Computer");
         selectionPanel.add(new JLabel(""));
@@ -124,7 +146,19 @@ public class ComputerBuilderApp extends JFrame {
             builder.addOtherPart("Other: " + selectedOther);
         }
 
-        Computer computer = builder.getResult();
+        ComputerComponent computer = builder.getResult(); // Base Computer
+
+        // Apply Decorators based on user selection
+        if (keyboardCheck.isSelected()) {
+            computer = new KeyboardDecorator(computer);
+        }
+        if (mouseCheck.isSelected()) {
+            computer = new MouseDecorator(computer);
+        }
+        if (monitorCheck.isSelected()) {
+            computer = new MonitorDecorator(computer);
+        }
+
         resultArea.setText(computer.toString());
     }
 

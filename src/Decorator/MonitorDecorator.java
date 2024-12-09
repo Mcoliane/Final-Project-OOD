@@ -1,21 +1,19 @@
-package Decorator;
+package decorator;
 
-import java.util.List;
+import Builder.ComputerComponent;
 
-public class MonitorDecorator extends ComputerDecorator{
-    public MonitorDecorator(ComputerInterface computer) {
-        super(computer);
+public class MonitorDecorator extends ComputerDecorator {
+    public MonitorDecorator(ComputerComponent decoratedComputer) {
+        super(decoratedComputer);
+        addMonitor();
+    }
+
+    private void addMonitor() {
+        addPart("Monitor");
     }
 
     @Override
-    public void addPart(String part) {
-        super.addPart(part);
-    }
-
-    @Override
-    public List<String> getParts() {
-        List<String> parts = super.getParts();
-        parts.add("Monitor");
-        return parts;
+    public String toString() {
+        return super.toString();
     }
 }
