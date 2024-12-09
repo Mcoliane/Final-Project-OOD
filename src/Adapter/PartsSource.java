@@ -8,4 +8,6 @@ public interface PartsSource {
     List<String> getStorages();
     List<String> getGraphicsCards();
     List<String> getOtherParts();
+    List<String> getMotherboards();
+    List<String> getPSUs();
 }

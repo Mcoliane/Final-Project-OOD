@@ -1,6 +1,5 @@
 package Adapter;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class CSVPartsAdapter implements PartsSource {
@@ -35,13 +34,20 @@ public class CSVPartsAdapter implements PartsSource {
         return filterByCategory("Other");
     }
 
+    @Override
+    public List<String> getMotherboards() {
+        return filterByCategory("Motherboard");
+    }
+
+    @Override
+    public List<String> getPSUs() {
+        return filterByCategory("PSU");
+    }
+
     private List<String> filterByCategory(String category) {
-        List<String> result = new ArrayList<>();
-        for (String[] row : csvReader.getRows()) {
-            if (row.length == 2 && row[0].trim().equalsIgnoreCase(category)) {
-                result.add(row[1].trim());
-            }
-        }
-        return result;
+        return csvReader.getRows().stream()
+                .filter(row -> row.length == 2 && row[0].trim().equalsIgnoreCase(category))
+                .map(row -> row[1].trim())
+                .toList();
     }
 }

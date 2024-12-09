@@ -38,6 +38,16 @@ public class ConcreteComputerBuilder implements ComputerBuilder {
     }
 
     @Override
+    public void addMotherboard(String motherboard) {
+        computer.addPart("Motherboard: " + motherboard);
+    }
+
+    @Override
+    public void addPSU(String psu) {
+        computer.addPart("PSU: " + psu);
+    }
+
+    @Override
     public Computer getResult() {
         return computer;
     }

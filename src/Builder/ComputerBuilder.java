@@ -7,5 +7,8 @@ public interface ComputerBuilder {
     void addStorage(String storage);
     void addGraphicsCard(String gpu);
     void addOtherPart(String part);
+    void addMotherboard(String motherboard);
+    void addPSU(String psu);
+
     Computer getResult();
 }

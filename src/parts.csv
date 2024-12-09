@@ -6,5 +6,8 @@ Storage,1TB HDD
 Storage,500GB SSD
 GPU,NVIDIA RTX 3060
 GPU,AMD Radeon RX 6600
-Other,Power Supply 600W
-Other,Power Supply 750W
+Motherboard,ASUS Prime Z390
+Motherboard,Gigabyte B550
+PSU,Power Supply 600W
+PSU,Power Supply 700W
+Other,Case Mid-Tower
