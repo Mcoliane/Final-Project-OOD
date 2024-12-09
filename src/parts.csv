@@ -1,0 +1,21 @@
+CPU,Intel Core i7
+CPU,Intel Core i5
+CPU,AMD Ryzen 5
+CPU,AMD Ryzen 9
+Memory,16GB DDR4
+Memory,8GB DDR4
+Memory,32GB DDR5
+Storage,1TB HDD
+Storage,500GB SSD
+Storage,2TB M.2 SSD
+GPU,NVIDIA RTX 3060
+GPU,AMD Radeon RX 6600
+GPU,NVIDIA RTX 4080 Ti
+GPU,AMD Radeon RX 9900
+Motherboard,ASUS Prime Z390
+Motherboard,Gigabyte B550
+PSU,Power Supply 600W
+PSU,Power Supply 700W
+PSU, Power Supply 900W
+Other,Case Mid-Tower
+Other,Case Water-Cooled Tower
