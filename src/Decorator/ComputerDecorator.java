@@ -1,4 +1,4 @@
-// Purpose: Abstract class for ComputerDecorator. it uses a decorator class to add peripherals 
+// Purpose: Abstract class for ComputerDecorator. it uses a decorator pattern to add peripherals 
 //to the computer. (such as a keyboard, mouse, and monitor).
 // Author: Mark
 package Decorator;
@@ -23,7 +23,7 @@ public abstract class ComputerDecorator implements ComputerComponent { //decorat
         return decoratedComputer.getParts();
     }
 
-    @Override //this returns the computer with the peripherals 
+    @Override //this returns the string argument containing the peripherals 
     public String toString() {
         return decoratedComputer.toString();
     }

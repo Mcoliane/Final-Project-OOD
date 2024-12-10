@@ -3,7 +3,7 @@
 //Author: Thien, Mark, Michael
 
 package ui;
-
+//importing libraries from other packages.
 import Adapter.CSVPartsAdapter;
 import Adapter.CSVReader;
 import Adapter.PartsSource;
@@ -15,7 +15,7 @@ import Decorator.KeyboardDecorator;
 import Decorator.MonitorDecorator;
 import Decorator.MouseDecorator;
 import observer.Observer;
-
+//java libraries
 import javax.swing.*;
 import java.awt.*;
 import java.util.List;
@@ -62,8 +62,9 @@ public class ComputerBuilderApp extends JFrame implements Observer {
     private List<String> originalMotherboards;
     private List<String> originalPSUs;
     private List<String> originalOthers;
-    
+    //creates the computer builder app ui
     public ComputerBuilderApp() {
+        //sets the title of the ui and resizes the window
         super("Computer Builder (Observer + Single Use + Reset + Disable Buttons)");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(800, 700);
@@ -101,7 +102,7 @@ public class ComputerBuilderApp extends JFrame implements Observer {
         motherboardCombo = createCombo(originalMotherboards);
         psuCombo = createCombo(originalPSUs);
         otherCombo = createCombo(originalOthers);
-
+        //adds the labels and combo boxes to the selection panel
         selectionPanel.add(new JLabel("CPU:"));
         selectionPanel.add(cpuCombo);
 

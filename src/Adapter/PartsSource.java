@@ -3,7 +3,7 @@
 package Adapter;
 
 import java.util.List;
-
+//interface for PartsSource
 public interface PartsSource {
     List<String> getCPUs();
     List<String> getMemories();

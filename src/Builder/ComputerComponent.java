@@ -1,5 +1,5 @@
 //header 
-//This interface outlines the basic to get and add parts to make a computer.
+//This is the ComputerComponent interface that is implemented by the Computer class.
 //Author: Thien
 package Builder;
 

@@ -1,5 +1,5 @@
 //header
-//responsible for reading and parsing a CSV file containing rows of computer parts categorized by type
+//responsible for reading and parsing the CSV file containing rows of computer parts categorized by category.
 //author: Michael 
 package Adapter;
 //importing the required libraries

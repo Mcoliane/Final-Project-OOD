@@ -1,5 +1,5 @@
 // header: Implement the ComputerBuilder interface to build a computer.
-// Purpose: add parts to a computer concrete object.
+// add parts to a computer concrete object.
 //author: Thien
 package Builder;
 
