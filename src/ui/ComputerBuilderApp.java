@@ -65,7 +65,7 @@ public class ComputerBuilderApp extends JFrame implements Observer {
     //creates the computer builder app ui
     public ComputerBuilderApp() {
         //sets the title of the ui and resizes the window
-        super("Computer Builder (Observer + Single Use + Reset + Disable Buttons)");
+        super("Computer Builder Application");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(800, 700);
         setLayout(new BorderLayout());
