@@ -3,6 +3,7 @@
 package Decorator;
 
 import Builder.ComputerComponent;
+
 //MouseDecorator class that adds a mouse to the computer.
 public class MouseDecorator extends ComputerDecorator {
     public MouseDecorator(ComputerComponent decoratedComputer) {

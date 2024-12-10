@@ -3,6 +3,7 @@
 package Decorator;
 
 import Builder.ComputerComponent;
+
 //MonitorDecorator class that adds a monitor to the computer.
 public class MonitorDecorator extends ComputerDecorator {
     public MonitorDecorator(ComputerComponent decoratedComputer) {
