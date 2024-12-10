@@ -1,3 +1,6 @@
+//header 
+//This interface outlines the basic behavior for computer components.
+//Author: Thien
 package Builder;
 
 import java.util.List;

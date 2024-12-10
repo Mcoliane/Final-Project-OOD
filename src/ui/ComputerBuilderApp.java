@@ -1,3 +1,7 @@
+//our main and swing class. 
+//this sets up the ui elemenets that will be used to build the computer.
+//Author: Thien, Mark, Michael
+
 package ui;
 
 import Adapter.CSVPartsAdapter;
@@ -7,9 +11,9 @@ import Builder.Computer;
 import Builder.ComputerBuilder;
 import Builder.ComputerComponent;
 import Builder.ConcreteComputerBuilder;
-import decorator.KeyboardDecorator;
-import decorator.MonitorDecorator;
-import decorator.MouseDecorator;
+import Decorator.KeyboardDecorator;
+import Decorator.MonitorDecorator;
+import Decorator.MouseDecorator;
 import observer.Observer;
 
 import javax.swing.*;
@@ -17,7 +21,7 @@ import java.awt.*;
 import java.util.List;
 
 public class ComputerBuilderApp extends JFrame implements Observer {
-
+    //class variables that uses jcombobox, jcheckbox, jtextarea, jbutton, and jpanel
     private JComboBox<String> cpuCombo;
     private JComboBox<String> memoryCombo;
     private JComboBox<String> storageCombo;
@@ -58,7 +62,7 @@ public class ComputerBuilderApp extends JFrame implements Observer {
     private List<String> originalMotherboards;
     private List<String> originalPSUs;
     private List<String> originalOthers;
-
+    
     public ComputerBuilderApp() {
         super("Computer Builder (Observer + Single Use + Reset + Disable Buttons)");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

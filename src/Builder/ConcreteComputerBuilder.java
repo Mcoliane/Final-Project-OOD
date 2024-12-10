@@ -1,3 +1,5 @@
+// header: Implement the ComputerBuilder interface to build a computer.
+//author: Thien
 package Builder;
 
 public class ConcreteComputerBuilder implements ComputerBuilder {

@@ -1,3 +1,5 @@
+//PartsSource interface
+//author: Michael 
 package Adapter;
 
 import java.util.List;

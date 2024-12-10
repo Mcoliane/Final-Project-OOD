@@ -1,3 +1,6 @@
+// Purpose: Interface for the ComputerBuilder class.
+//it defines the requirement to build a computer
+//author: Thien
 package Builder;
 
 public interface ComputerBuilder {
