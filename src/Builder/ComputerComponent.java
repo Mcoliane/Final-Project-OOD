@@ -1,5 +1,5 @@
 //header 
-//This interface outlines the basic behavior for computer components.
+//This interface outlines the basic to get and add parts to make a computer.
 //Author: Thien
 package Builder;
 

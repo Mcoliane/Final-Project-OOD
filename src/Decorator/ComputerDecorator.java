@@ -13,17 +13,17 @@ public abstract class ComputerDecorator implements ComputerComponent { //decorat
         this.decoratedComputer = decoratedComputer;
     }
 
-    @Override //this add the peripherals to the computer
+    @Override //this add the peripherals as an option for the computer
     public void addPart(String part) {
         decoratedComputer.addPart(part);
     }
 
-    @Override //this gets the peripherals for the computer
+    @Override //gets the peripherals 
     public List<String> getParts() {
         return decoratedComputer.getParts();
     }
 
-    @Override //this returns the computer with the peripherals
+    @Override //this returns the computer with the peripherals 
     public String toString() {
         return decoratedComputer.toString();
     }

@@ -1,8 +1,8 @@
-// Purpose: Interface for the ComputerBuilder class.
+//Header: Interface for the ComputerBuilder class.
 //it defines the requirement to build a computer
 //author: Thien
 package Builder;
-
+//all the methods required to build a computer
 public interface ComputerBuilder {
     void reset();
     void addCPU(String cpu);
